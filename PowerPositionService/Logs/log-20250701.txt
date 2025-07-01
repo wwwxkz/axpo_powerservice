@@ -1,0 +1,321 @@
+2025-07-01 10:19:00.351 -03:00 [INF] Starting Power Position Service
+2025-07-01 10:19:00.472 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to load PowerService type. Make sure PowerService.dll is available.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 22
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 10:31:33.561 -03:00 [INF] Starting Power Position Service
+2025-07-01 10:31:33.665 -03:00 [INF] Loading PowerService assembly...
+2025-07-01 10:31:33.667 -03:00 [ERR] Error initializing PowerService
+System.IO.FileNotFoundException: Could not load file or assembly '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/PowerService.dll'. The system cannot find the file specified.
+
+File name: '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/PowerService.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 23
+2025-07-01 10:31:33.682 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Could not load file or assembly '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/PowerService.dll'. The system cannot find the file specified.
+
+ ---> System.IO.FileNotFoundException: Could not load file or assembly '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/PowerService.dll'. The system cannot find the file specified.
+
+File name: '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/PowerService.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 23
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 48
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 10:33:09.379 -03:00 [INF] Starting Power Position Service
+2025-07-01 10:33:09.484 -03:00 [INF] Loading PowerService assembly...
+2025-07-01 10:33:09.487 -03:00 [INF] Loading assembly from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/../../../netstandard2.0/PowerService.dll
+2025-07-01 10:33:09.489 -03:00 [ERR] Error initializing PowerService
+System.IO.FileNotFoundException: Could not load file or assembly '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/netstandard2.0/PowerService.dll'. The system cannot find the file specified.
+
+File name: '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/netstandard2.0/PowerService.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 26
+2025-07-01 10:33:09.504 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Could not load file or assembly '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/netstandard2.0/PowerService.dll'. The system cannot find the file specified.
+
+ ---> System.IO.FileNotFoundException: Could not load file or assembly '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/netstandard2.0/PowerService.dll'. The system cannot find the file specified.
+
+File name: '/home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/netstandard2.0/PowerService.dll'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 26
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 51
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 11:28:00.291 -03:00 [INF] Starting Power Position Service
+2025-07-01 11:28:00.480 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Could not find PowerService.dll at: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/netstandard2.0/PowerService.dll
+ ---> System.IO.FileNotFoundException: Could not find PowerService.dll at: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/netstandard2.0/PowerService.dll
+   at PowerPositionService.Services.PowerServiceWrapper..ctor() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 22
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 44
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 11:28:29.229 -03:00 [INF] Starting Power Position Service
+2025-07-01 11:28:29.422 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Failed to find PowerService type in the assembly.
+ ---> System.TypeLoadException: Failed to find PowerService type in the assembly.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 31
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 44
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 11:29:30.380 -03:00 [INF] Starting Power Position Service
+2025-07-01 11:29:30.566 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Failed to find PowerService type in the assembly.
+ ---> System.TypeLoadException: Failed to find PowerService type in the assembly.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 31
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 44
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 11:32:18.679 -03:00 [INF] Starting Power Position Service
+2025-07-01 11:32:18.865 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/PowerService.dll
+2025-07-01 11:32:18.869 -03:00 [INF] Found 12 types in assembly
+2025-07-01 11:32:18.870 -03:00 [INF] Type: Microsoft.CodeAnalysis.EmbeddedAttribute
+2025-07-01 11:32:18.870 -03:00 [INF] Type: System.Runtime.CompilerServices.IsReadOnlyAttribute
+2025-07-01 11:32:18.870 -03:00 [INF] Type: System.Runtime.CompilerServices.NullableAttribute
+2025-07-01 11:32:18.870 -03:00 [INF] Type: System.Runtime.CompilerServices.NullableContextAttribute
+2025-07-01 11:32:18.871 -03:00 [INF] Type: Axpo.IPowerService
+2025-07-01 11:32:18.871 -03:00 [INF] Type: Axpo.PowerPeriod
+2025-07-01 11:32:18.871 -03:00 [INF] Type: Axpo.PowerService
+2025-07-01 11:32:18.871 -03:00 [INF] Type: Axpo.PowerServiceException
+2025-07-01 11:32:18.871 -03:00 [INF] Type: Axpo.PowerTrade
+2025-07-01 11:32:18.872 -03:00 [INF] Type: Axpo.PowerService+<GetTradesAsync>d__5
+2025-07-01 11:32:18.872 -03:00 [INF] Type: Axpo.PowerService+<>c__DisplayClass8_0
+2025-07-01 11:32:18.872 -03:00 [INF] Type: Axpo.PowerTrade+<>c
+2025-07-01 11:32:18.873 -03:00 [INF] Found PowerService type: Axpo.PowerService
+2025-07-01 11:32:18.876 -03:00 [ERR] Failed to initialize PowerService
+System.InvalidCastException: Unable to cast object of type 'Axpo.PowerService' to type 'PowerPositionService.Interfaces.IPowerService'.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 52
+2025-07-01 11:32:18.899 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Unable to cast object of type 'Axpo.PowerService' to type 'PowerPositionService.Interfaces.IPowerService'.
+ ---> System.InvalidCastException: Unable to cast object of type 'Axpo.PowerService' to type 'PowerPositionService.Interfaces.IPowerService'.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 52
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 58
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49
+2025-07-01 11:41:00.337 -03:00 [INF] Starting Power Position Service
+2025-07-01 11:41:00.536 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Debug/net8.0/PowerService.dll
+2025-07-01 11:41:00.541 -03:00 [INF] Found 12 types in assembly
+2025-07-01 11:41:00.541 -03:00 [INF] Type: Microsoft.CodeAnalysis.EmbeddedAttribute
+2025-07-01 11:41:00.541 -03:00 [INF] Type: System.Runtime.CompilerServices.IsReadOnlyAttribute
+2025-07-01 11:41:00.542 -03:00 [INF] Type: System.Runtime.CompilerServices.NullableAttribute
+2025-07-01 11:41:00.542 -03:00 [INF] Type: System.Runtime.CompilerServices.NullableContextAttribute
+2025-07-01 11:41:00.542 -03:00 [INF] Type: Axpo.IPowerService
+2025-07-01 11:41:00.542 -03:00 [INF] Type: Axpo.PowerPeriod
+2025-07-01 11:41:00.542 -03:00 [INF] Type: Axpo.PowerService
+2025-07-01 11:41:00.543 -03:00 [INF] Type: Axpo.PowerServiceException
+2025-07-01 11:41:00.543 -03:00 [INF] Type: Axpo.PowerTrade
+2025-07-01 11:41:00.543 -03:00 [INF] Type: Axpo.PowerService+<GetTradesAsync>d__5
+2025-07-01 11:41:00.543 -03:00 [INF] Type: Axpo.PowerService+<>c__DisplayClass8_0
+2025-07-01 11:41:00.543 -03:00 [INF] Type: Axpo.PowerTrade+<>c
+2025-07-01 11:41:00.544 -03:00 [INF] Found PowerService type: Axpo.PowerService
+2025-07-01 11:41:00.549 -03:00 [ERR] Failed to initialize PowerService
+System.InvalidCastException: Unable to cast object of type 'Axpo.PowerService' to type 'PowerPositionService.Interfaces.IPowerService'.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 52
+2025-07-01 11:41:00.574 -03:00 [FTL] Application terminated unexpectedly
+System.TypeLoadException: Failed to initialize PowerService: Unable to cast object of type 'Axpo.PowerService' to type 'PowerPositionService.Interfaces.IPowerService'.
+ ---> System.InvalidCastException: Unable to cast object of type 'Axpo.PowerService' to type 'PowerPositionService.Interfaces.IPowerService'.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 52
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 58
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.Main(String[] args) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Program.cs:line 49

@@ -1,0 +1,112 @@
+2025-07-01 11:57:00.898 -03:00 [INF] Application configured. Starting the host...
+2025-07-01 11:57:00.948 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/PowerService.dll
+2025-07-01 11:57:00.952 -03:00 [ERR] Failed to initialize PowerService
+System.TypeLoadException: Failed to find PowerService type in the assembly.
+   at PowerPositionService.Services.PowerServiceWrapper..ctor(ILogger`1 logger) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 36
+2025-07-01 11:59:33.103 -03:00 [INF] Application configured. Starting the host...
+2025-07-01 11:59:33.149 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/PowerService.dll
+2025-07-01 11:59:33.154 -03:00 [INF] Successfully created PowerService instance
+2025-07-01 11:59:33.173 -03:00 [INF] Power Position Worker started with 5 minute interval
+2025-07-01 11:59:33.178 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 11:59:33.178 -03:00 [INF] Hosting environment: Production
+2025-07-01 11:59:33.179 -03:00 [INF] Content root path: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService
+2025-07-01 11:59:33.182 -03:00 [INF] Starting power position report generation
+2025-07-01 11:59:33.276 -03:00 [ERR] Error getting trades asynchronously
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert type 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Axpo.PowerTrade>>' to 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<object>>'
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at PowerPositionService.Services.PowerServiceWrapper.GetTradesAsync(DateTime date) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 71
+2025-07-01 11:59:33.290 -03:00 [ERR] Error generating power position report
+System.InvalidOperationException: Error getting trades asynchronously: Cannot convert type 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Axpo.PowerTrade>>' to 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<object>>'
+ ---> Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert type 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Axpo.PowerTrade>>' to 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<object>>'
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at PowerPositionService.Services.PowerServiceWrapper.GetTradesAsync(DateTime date) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 71
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper.GetTradesAsync(DateTime date) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 78
+   at PowerPositionService.Workers.PowerPositionWorker.GeneratePowerPositionReportAsync(CancellationToken cancellationToken) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Workers/PowerPositionWorker.cs:line 71
+2025-07-01 12:00:04.503 -03:00 [INF] Application is shutting down...
+2025-07-01 12:00:04.508 -03:00 [INF] Stopping Power Position Worker...
+2025-07-01 12:00:11.284 -03:00 [INF] Application configured. Starting the host...
+2025-07-01 12:00:11.327 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/PowerService.dll
+2025-07-01 12:00:11.332 -03:00 [INF] Successfully created PowerService instance
+2025-07-01 12:00:11.351 -03:00 [INF] Power Position Worker started with 5 minute interval
+2025-07-01 12:00:11.361 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 12:00:11.361 -03:00 [INF] Hosting environment: Development
+2025-07-01 12:00:11.362 -03:00 [INF] Content root path: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService
+2025-07-01 12:00:11.364 -03:00 [INF] Starting power position report generation
+2025-07-01 12:00:11.434 -03:00 [ERR] Error getting trades asynchronously
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert type 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Axpo.PowerTrade>>' to 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<object>>'
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at PowerPositionService.Services.PowerServiceWrapper.GetTradesAsync(DateTime date) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 71
+2025-07-01 12:00:11.443 -03:00 [ERR] Error generating power position report
+System.InvalidOperationException: Error getting trades asynchronously: Cannot convert type 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Axpo.PowerTrade>>' to 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<object>>'
+ ---> Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert type 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Axpo.PowerTrade>>' to 'System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<object>>'
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at PowerPositionService.Services.PowerServiceWrapper.GetTradesAsync(DateTime date) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 71
+   --- End of inner exception stack trace ---
+   at PowerPositionService.Services.PowerServiceWrapper.GetTradesAsync(DateTime date) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 78
+   at PowerPositionService.Workers.PowerPositionWorker.GeneratePowerPositionReportAsync(CancellationToken cancellationToken) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Workers/PowerPositionWorker.cs:line 71
+2025-07-01 12:01:06.016 -03:00 [INF] Application is shutting down...
+2025-07-01 12:01:06.021 -03:00 [INF] Stopping Power Position Worker...
+2025-07-01 12:01:14.640 -03:00 [INF] Application configured. Starting the host...
+2025-07-01 12:01:14.687 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/PowerService.dll
+2025-07-01 12:01:14.694 -03:00 [INF] Successfully created PowerService instance
+2025-07-01 12:01:14.718 -03:00 [INF] Power Position Worker started with 5 minute interval
+2025-07-01 12:01:14.732 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 12:01:14.733 -03:00 [INF] Hosting environment: Development
+2025-07-01 12:01:14.733 -03:00 [INF] Content root path: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService
+2025-07-01 12:01:14.736 -03:00 [INF] Starting power position report generation
+2025-07-01 12:01:19.655 -03:00 [ERR] Error generating power position report
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert type 'Axpo.PowerPeriod[]' to 'System.Collections.Generic.IEnumerable<object>'
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at PowerPositionService.Services.PowerServiceWrapper.ConvertTrades(IEnumerable`1 trades)+MoveNext() in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Services/PowerServiceWrapper.cs:line 102
+   at System.Linq.Enumerable.<Any>g__WithEnumerator|36_0[TSource](IEnumerable`1 source)
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   at PowerPositionService.Workers.PowerPositionWorker.GeneratePowerPositionReportAsync(CancellationToken cancellationToken) in /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/Workers/PowerPositionWorker.cs:line 73
+2025-07-01 12:02:31.750 -03:00 [INF] Application is shutting down...
+2025-07-01 12:02:31.755 -03:00 [INF] Stopping Power Position Worker...
+2025-07-01 12:02:42.217 -03:00 [INF] Application configured. Starting the host...
+2025-07-01 12:02:42.263 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Release/net8.0/PowerService.dll
+2025-07-01 12:02:42.268 -03:00 [INF] Successfully created PowerService instance
+2025-07-01 12:02:42.290 -03:00 [INF] Power Position Worker started with 5 minute interval
+2025-07-01 12:02:42.298 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 12:02:42.305 -03:00 [INF] Hosting environment: Development
+2025-07-01 12:02:42.306 -03:00 [INF] Content root path: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService
+2025-07-01 12:02:42.312 -03:00 [INF] Starting power position report generation
+2025-07-01 12:02:47.292 -03:00 [INF] Retrieved 17 trades
+2025-07-01 12:02:47.295 -03:00 [DBG] Calculating aggregated positions for 17 trades
+2025-07-01 12:02:47.316 -03:00 [DBG] Aggregated volumes per period: {Period=1, Volume=8296.74}, {Period=2, Volume=8542.41}, {Period=3, Volume=8643.79}, {Period=4, Volume=9525.86}, {Period=5, Volume=9350.77}, {Period=6, Volume=8772.46}, {Period=7, Volume=8421.89}, {Period=8, Volume=8912.12}, {Period=9, Volume=8344.05}, {Period=10, Volume=7824.06}, {Period=11, Volume=8602.83}, {Period=12, Volume=6732.37}, {Period=13, Volume=8423.46}, {Period=14, Volume=8032.15}, {Period=15, Volume=9198.39}, {Period=16, Volume=7343.32}, {Period=17, Volume=11148.87}, {Period=18, Volume=10190.62}, {Period=19, Volume=8660.74}, {Period=20, Volume=9064.28}, {Period=21, Volume=8373.94}, {Period=22, Volume=8012.43}, {Period=23, Volume=8644.31}, {Period=24, Volume=9300.27}
+2025-07-01 12:02:47.316 -03:00 [INF] Calculated aggregated positions for 24 periods
+2025-07-01 12:02:47.317 -03:00 [DBG] Mapping 24 positions to local time
+2025-07-01 12:02:47.323 -03:00 [INF] Mapped 24 positions to local time
+2025-07-01 12:02:47.324 -03:00 [DBG] Ensuring output directory exists: ./PowerPositionData
+2025-07-01 12:02:47.324 -03:00 [INF] Generated output file path: ./PowerPositionData/powerposition_20250701_1202.csv
+2025-07-01 12:02:47.327 -03:00 [DBG] Writing 24 records to file: ./PowerPositionData/powerposition_20250701_1202.csv
+2025-07-01 12:02:47.340 -03:00 [INF] Successfully wrote 24 records to file: ./PowerPositionData/powerposition_20250701_1202.csv
+2025-07-01 12:02:47.340 -03:00 [INF] Successfully generated power position report: ./PowerPositionData/powerposition_20250701_1202.csv
+2025-07-01 12:18:29.817 -03:00 [WRN] Previous execution is still running. Skipping this interval.
+2025-07-01 12:23:29.817 -03:00 [WRN] Previous execution is still running. Skipping this interval.
+2025-07-01 12:28:29.816 -03:00 [WRN] Previous execution is still running. Skipping this interval.
+2025-07-01 14:08:05.450 -03:00 [WRN] Previous execution is still running. Skipping this interval.
+2025-07-01 19:28:15.219 -03:00 [INF] Application configured. Starting the host...
+2025-07-01 19:28:15.270 -03:00 [INF] Loading PowerService from: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService/bin/Debug/net8.0/PowerService.dll
+2025-07-01 19:28:15.276 -03:00 [INF] Successfully created PowerService instance
+2025-07-01 19:28:15.299 -03:00 [INF] Power Position Worker started with 5 minute interval
+2025-07-01 19:28:15.304 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 19:28:15.304 -03:00 [INF] Hosting environment: Production
+2025-07-01 19:28:15.304 -03:00 [INF] Content root path: /home/wwwxkz/Documents/Axpo/axso_etrm_coding_challenge/PowerPositionService
+2025-07-01 19:28:15.309 -03:00 [INF] Starting power position report generation
+2025-07-01 19:28:17.434 -03:00 [INF] Retrieved 14 power trades for 2025-07-01
+2025-07-01 19:28:17.461 -03:00 [INF] Calculated aggregated positions for 24 periods
+2025-07-01 19:28:17.467 -03:00 [INF] Mapped 24 positions to local time
+2025-07-01 19:28:17.467 -03:00 [INF] Calculated aggregated volumes for 24 periods
+2025-07-01 19:28:17.468 -03:00 [INF] Generated output file path: ./PowerPositionData/PowerPosition_20250701_1928.csv
+2025-07-01 19:28:17.469 -03:00 [INF] Writing aggregated positions to ./PowerPositionData/PowerPosition_20250701_1928.csv
+2025-07-01 19:28:17.481 -03:00 [INF] Successfully wrote 24 records to file: ./PowerPositionData/PowerPosition_20250701_1928.csv
+2025-07-01 19:28:17.482 -03:00 [INF] Successfully generated power position report
+2025-07-01 19:28:20.016 -03:00 [INF] Application is shutting down...
+2025-07-01 19:28:20.020 -03:00 [INF] Stopping Power Position Worker...
